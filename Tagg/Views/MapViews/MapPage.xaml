@@ -3,13 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:mapViews="clr-namespace:Tagg.Views.MapViews;assembly=Tagg"
+             xmlns:mapViews="clr-namespace:Tagg.Views.MapViews;assembly=Tagg" xmlns:behaviors="clr-namespace:Tagg.Views.Behaviors"
              mc:Ignorable="d"
              x:Class="Tagg.Views.MapViews.MapPage">
     <ContentPage.Content>
         <AbsoluteLayout >
-            <mapViews:MapView AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All" />
-            <Frame BackgroundColor="White"  AbsoluteLayout.LayoutBounds=".5,1,.25,.5" AbsoluteLayout.LayoutFlags="All">
+            <mapViews:MapView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" />
+            <Frame BackgroundColor="White"  AbsoluteLayout.LayoutBounds="0,1,1,.25" AbsoluteLayout.LayoutFlags="All" >
+                <Frame.Behaviors>
+                    <behaviors:SlidingFrameBehavior/>
+                </Frame.Behaviors>
                 <Label TextColor="Black" Text="Middle control" HorizontalTextAlignment="Center"/>
             </Frame>
         </AbsoluteLayout>
