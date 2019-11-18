@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Xamarin.Forms;
 
 namespace Tagg.Views.Behaviors
@@ -31,18 +32,16 @@ namespace Tagg.Views.Behaviors
 
 
             var yAxisChange = 0.0;
+            var math = args.TotalY / Device.info.PixelScreenSize.Height;
 
-            if (args.TotalY < 0)
-            {
-                yAxisChange = .01;
+            Debug.WriteLine($"Total Y: {args.TotalY}");
+            Debug.WriteLine($"ScreenHeight: {Device.info.PixelScreenSize}");
+            Debug.Write($"Math {args.TotalY / Device.info.PixelScreenSize.Height}");
 
-            }
-            if(args.TotalY > 0)
-            {
-                yAxisChange = -.01;
-            }
 
-            var newHeight = currentHeight + yAxisChange;
+
+
+            var newHeight = currentHeight - math;
 
             if (newHeight > .15 && newHeight < 1)
             {
