@@ -20,7 +20,7 @@ namespace Tagg.Views
         {
             InitializeComponent();
 
-            MasterBehavior = MasterBehavior.Popover;
+            MasterBehavior = MasterBehavior.Split;
 
             MenuPages.Add((int)MenuItemType.Home, (NavigationPage)Detail);
         }

@@ -45,7 +45,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>Apple Development: Gabriel Querbes (HMY9V69Z3U)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
@@ -138,7 +138,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Tagg\Tagg.csproj">
-      <Project>{E45CF468-90A1-4ECE-BB76-F914EE6326BB}</Project>
+      <Project>{8F1AB45B-A845-4A92-A996-15F71B85F50C}</Project>
       <Name>Tagg</Name>
     </ProjectReference>
   </ItemGroup>

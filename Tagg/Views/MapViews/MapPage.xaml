@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:mapViews="clr-namespace:Tagg.Views.MapViews;assembly=Tagg" xmlns:behaviors="clr-namespace:Tagg.Views.Behaviors"
+             xmlns:mapViews="clr-namespace:Tagg.Views.MapViews;assembly=Tagg"
+             xmlns:behaviors="clr-namespace:Tagg.Views.Behaviors"
+             xmlns:profileViews="clr-namespace:Tagg.Views.ProfileViews;assembly=Tagg"
              mc:Ignorable="d"
              x:Class="Tagg.Views.MapViews.MapPage">
     <ContentPage.Content>
@@ -13,7 +15,8 @@
                 <Frame.Behaviors>
                     <behaviors:SlidingFrameBehavior/>
                 </Frame.Behaviors>
-                <Label TextColor="Black" Text="Middle control" HorizontalTextAlignment="Center"/>
+
+                <profileViews:ProfileDetailView/>
             </Frame>
         </AbsoluteLayout>
   
