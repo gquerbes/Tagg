@@ -31,8 +31,12 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Views\Behaviors\" />
     <Folder Include="Views\ProfileViews\" />
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\ProfileViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Views\ProfileViews\ProfileDetailPage.cs" />
+    <Compile Remove="Models\HomeMenuItem.cs" />
+    <Compile Remove="Models\HomeMenuItem.cs" />
   </ItemGroup>
 </Project>

@@ -1,5 +1,4 @@
-﻿using Tagg.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
@@ -22,6 +21,8 @@ namespace Tagg.Views
             {
                 new HomeMenuItem {Id = MenuItemType.Home, Title="Home" },
                 new HomeMenuItem {Id = MenuItemType.Map, Title="Map" },
+                new HomeMenuItem {Id = MenuItemType.Listview, Title="List View" },
+
             };
 
             ListViewMenu.ItemsSource = menuItems;

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:profileViews="clr-namespace:Tagg.Views.ProfileViews;assembly=Tagg"
+             x:Class="Tagg.Views.ProfileViews.ProfileListView">
+    <ContentView.Content>
+        <ListView x:Name="ListView" ItemsSource="{Binding users}" IsEnabled="{Binding IsFullScreen, Mode=OneWay}">
+            <ListView.ItemTemplate>
+                <profileViews:ProfileViewCell/>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentView.Content>
+
+</ContentView>
