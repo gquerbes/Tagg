@@ -1,54 +1,73 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Tagg.Views.Behaviors
 {
     public class SlidingFrameBehavior : Behavior<View>
     {
-        
-
 
         protected override void OnAttachedTo(View bindable)
         {
+            /*
+             * Swipe gesture
+             */
+            var upSwipeGesture = new SwipeGestureRecognizer(){Direction = SwipeDirection.Up};
+            var downSwipeGesture = new SwipeGestureRecognizer(){Direction = SwipeDirection.Down};
+            upSwipeGesture.Swiped += SwipeGestureOnSwiped;
+            downSwipeGesture.Swiped += SwipeGestureOnSwiped;
+            bindable.GestureRecognizers.Add(upSwipeGesture);
+            bindable.GestureRecognizers.Add(downSwipeGesture);
 
-            var gest = new PanGestureRecognizer();
-            gest.PanUpdated += OnGestureRegcongized;
-            bindable.GestureRecognizers.Add(gest);
+            //base
             base.OnAttachedTo(bindable);
         }
 
-
-        protected override void OnDetachingFrom(BindableObject bindable)
+        private void SwipeGestureOnSwiped(object sender, SwipedEventArgs e)
         {
-            base.OnDetachingFrom(bindable);
+            var view = (View) sender;
+
+            AnimateSlide(view, e.Direction);
+
         }
 
+        private bool isAnimating;
+        private const double CollapsedHeight = .25;
+        private const double ExpandedHeight = 1;
 
-        protected virtual void OnGestureRegcongized(object sender, PanUpdatedEventArgs args)
+
+
+        private async Task AnimateSlide(View view, SwipeDirection direction)
         {
-            var view = (View)sender;
-            var currentHeight = AbsoluteLayout.GetLayoutBounds(view).Height;
+            if(isAnimating)return;
+            isAnimating = true;
+            double height = AbsoluteLayout.GetLayoutBounds(view).Height;
+            double changeDelta = 0;
 
-
-            var yAxisChange = 0.0;
-            var math = args.TotalY / Device.info.PixelScreenSize.Height;
-
-            Debug.WriteLine($"Total Y: {args.TotalY}");
-            Debug.WriteLine($"ScreenHeight: {Device.info.PixelScreenSize}");
-            Debug.Write($"Math {args.TotalY / Device.info.PixelScreenSize.Height}");
-
-
-
-
-            var newHeight = currentHeight - math;
-
-            if (newHeight > .15 && newHeight < 1)
+            switch (direction)
             {
-                AbsoluteLayout.SetLayoutBounds(view, new Rectangle(0, 1, 1, newHeight ));
+                case SwipeDirection.Up:
+                    changeDelta = .05;
+                    break;
+                case SwipeDirection.Down:
+                    changeDelta = -.05;
+                    break;
+            }
+
+            while ((height + changeDelta <= ExpandedHeight) && (height + changeDelta >= CollapsedHeight))
+            {
+                height += changeDelta;
+                AbsoluteLayout.SetLayoutBounds(view, new Rectangle(0, 1, 1, height));
+                await Task.Delay(15);
             }
             
-            
+
+            isAnimating = false;
         }
+      
+
+
+     
     }
 }

@@ -29,7 +29,7 @@ namespace Tagg.Views
         {
             InitializeComponent();
 
-            MasterBehavior = MasterBehavior.Split;
+            MasterBehavior = MasterBehavior.Popover;
 
             MenuPages.Add((int)MenuItemType.Home, (NavigationPage)Detail);
         }
@@ -61,7 +61,7 @@ namespace Tagg.Views
                 if (Device.RuntimePlatform == Device.Android)
                     await Task.Delay(100);
 
-                IsPresented = false;
+                IsPresented = true;
             }
         }
     }
