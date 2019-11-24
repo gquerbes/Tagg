@@ -4,7 +4,7 @@
              x:Class="Tagg.Views.ProfileViews.ProfileDetailView">
     <ContentView.Content>
         <AbsoluteLayout>
-            <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,.2" RowSpacing="0" ColumnSpacing="10">
+            <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,.2" RowSpacing="0" ColumnSpacing="10" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
@@ -16,8 +16,8 @@
                 </Grid.ColumnDefinitions>
 
                 <BoxView HeightRequest="75" WidthRequest="75" Color="Blue"  Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"/>
-                <Label Text="Cool Person" FontSize="Title" FontAttributes="Bold" Grid.Row="0" Grid.Column="1"/>
-                <Label Text="15 miles away" FontSize="Caption" FontAttributes="Italic" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="Cool Person" FontSize="Title" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" TextColor="{DynamicResource TextPrimaryColor}"/>
+                <Label Text="15 miles away" FontSize="Caption" FontAttributes="Italic" Grid.Row="1" Grid.Column="1" TextColor="{DynamicResource TextSecondaryColor}"/>
             </Grid>
         </AbsoluteLayout>
     </ContentView.Content>

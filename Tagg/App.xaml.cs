@@ -2,7 +2,6 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Tagg.Views;
-using TaggUI.Styles;
 
 namespace Tagg
 {

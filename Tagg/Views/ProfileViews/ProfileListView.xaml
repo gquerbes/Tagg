@@ -4,7 +4,7 @@
              xmlns:profileViews="clr-namespace:Tagg.Views.ProfileViews;assembly=Tagg"
              x:Class="Tagg.Views.ProfileViews.ProfileListView">
     <ContentView.Content>
-        <ListView x:Name="ListView" RowHeight="75" ItemsSource="{Binding users}" IsEnabled="{Binding IsFullScreen, Mode=OneWay}">
+        <ListView x:Name="ListView" RowHeight="75" ItemsSource="{Binding users}">
             <ListView.ItemTemplate>
                 <profileViews:ProfileViewCell/>
             </ListView.ItemTemplate>

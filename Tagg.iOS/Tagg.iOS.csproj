@@ -148,7 +148,11 @@
       <Project>{8F1AB45B-A845-4A92-A996-15F71B85F50C}</Project>
       <Name>Tagg</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\TaggUI\TaggUI\TaggUI.csproj">
+    <ProjectReference Include="..\TaggUI\TaggUI.iOS\TaggUI.iOS.csproj">
+      <Project>{8DDF78EB-EB65-4FDD-9C9D-3D724B2F12C2}</Project>
+      <Name>TaggUI.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaggUI\TaggUI\TaggUI.csproj">
       <Project>{205701DE-F406-41EC-B9EB-CA20AE2AA677}</Project>
       <Name>TaggUI</Name>
     </ProjectReference>

@@ -11,23 +11,6 @@ namespace Tagg.Views.ProfileViews
     {
         ProfileListViewModel _vm;
 
-        protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            base.OnPropertyChanged(propertyName);
-            if (propertyName.Equals("Height"))
-            {
-                if(this.Height + 180 >= Device.info.ScaledScreenSize.Height && !_vm.IsFullScreen)
-                {
-                    _vm.IsFullScreen = true;
-                    //TODO: Alert parent view to stop panning so that user can scroll back to top of list
-                }
-                else if(!(this.Height + 180 >= Device.info.ScaledScreenSize.Height) && _vm.IsFullScreen)
-                {
-                    _vm.IsFullScreen = false;
-                }
-            }
-        }
-
 
         public ProfileListView()
         {

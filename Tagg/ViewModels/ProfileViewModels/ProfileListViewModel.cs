@@ -4,7 +4,7 @@ using System.ComponentModel;
 
 namespace Tagg.ViewModels.ProfileViewModels
 {
-    public class ProfileListViewModel : INotifyPropertyChanged 
+    public class ProfileListViewModel 
     {
         public ProfileListViewModel()
         {
@@ -14,9 +14,7 @@ namespace Tagg.ViewModels.ProfileViewModels
         "user1", "user2", "user3", "user1", "user2", "user3", "" +
             "user1", "user2", "user3", "user1", "user2", "user3", "user1", "user2", "user3", "user1", "user2", "user3" };
 
-        public bool IsFullScreen { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
 
        
     }

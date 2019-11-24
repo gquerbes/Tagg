@@ -11,7 +11,7 @@
     <ContentPage.Content>
         <AbsoluteLayout >
             <mapViews:MapView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" />
-            <containers:SlidingFrame>
+            <containers:SlidingFrame BackgroundColor="{DynamicResource BackgroundColor}">
                 <profileViews:ProfileDetailView/>
             </containers:SlidingFrame>
         </AbsoluteLayout>

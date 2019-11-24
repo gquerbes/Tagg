@@ -14,8 +14,8 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <BoxView HeightRequest="10" WidthRequest="10" Color="Blue" Margin="2" Grid.Column="0" Grid.Row="0" />
-                <Label Text="Cool Person" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="1"/>
-                <Label Text="15 miles away" FontSize="Caption" VerticalTextAlignment="Start" FontAttributes="Italic" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="Cool Person" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" TextColor="{DynamicResource TextPrimaryColor}" />
+                <Label Text="15 miles away" FontSize="Caption" VerticalTextAlignment="Start" FontAttributes="Italic" Grid.Row="1" Grid.Column="1" TextColor="{DynamicResource TextSecondaryColor}"/>
             </Grid>
     </ViewCell.View>
     </ViewCell>

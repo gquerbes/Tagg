@@ -39,6 +39,6 @@
     <Compile Remove="Models\HomeMenuItem.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\TaggUI\TaggUI\TaggUI.csproj" />
+    <ProjectReference Include="..\TaggUI\TaggUI\TaggUI.csproj" />
   </ItemGroup>
 </Project>
