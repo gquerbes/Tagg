@@ -6,11 +6,10 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Tagg.Views.MapViews;
 
-namespace Tagg.Views
+namespace Tagg.Views.NavigationViews
 {
     public enum MenuItemType
     {
-        Home,
         Map,
         Listview
     }
@@ -31,7 +30,7 @@ namespace Tagg.Views
 
             MasterBehavior = MasterBehavior.SplitOnLandscape;
 
-            MenuPages.Add((int)MenuItemType.Home, (NavigationPage)Detail);
+            MenuPages.Add((int)MenuItemType.Map, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -40,9 +39,7 @@ namespace Tagg.Views
             {
                 switch (id)
                 {
-                    case (int)MenuItemType.Home:
-                        MenuPages.Add(id, new NavigationPage(new TestView()));
-                        break;
+                   
                     case (int)MenuItemType.Map:
                         MenuPages.Add(id, new NavigationPage(new MapPage()));
                         break;

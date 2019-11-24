@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Tagg.Views;
+using Tagg.Views.NavigationViews;
 
 namespace Tagg
 {

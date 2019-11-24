@@ -22,9 +22,6 @@
     <EmbeddedResource Update="Views\MapViews\MapView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\TestView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +29,7 @@
     <Folder Include="Views\ProfileViews\" />
     <Folder Include="Models\" />
     <Folder Include="ViewModels\ProfileViewModels\" />
+    <Folder Include="Views\NavigationViews\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Views\ProfileViews\ProfileDetailPage.cs" />

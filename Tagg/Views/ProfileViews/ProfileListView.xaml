@@ -4,7 +4,7 @@
              xmlns:profileViews="clr-namespace:Tagg.Views.ProfileViews;assembly=Tagg"
              x:Class="Tagg.Views.ProfileViews.ProfileListView">
     <ContentView.Content>
-        <ListView x:Name="ListView" RowHeight="75" ItemsSource="{Binding users}">
+        <ListView x:Name="ListView" RowHeight="75" ItemsSource="{Binding users}" ItemTapped="ListView_ItemTapped">
             <ListView.ItemTemplate>
                 <profileViews:ProfileViewCell/>
             </ListView.ItemTemplate>

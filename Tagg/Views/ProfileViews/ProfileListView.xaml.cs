@@ -7,6 +7,7 @@ using Xamarin.Forms.Xaml;
 
 namespace Tagg.Views.ProfileViews
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProfileListView : ContentView
     {
         ProfileListViewModel _vm;
@@ -18,6 +19,11 @@ namespace Tagg.Views.ProfileViews
             _vm = new ProfileListViewModel();
             this.BindingContext = _vm;
 
+        }
+
+        private void ListView_ItemTapped(object sender, ItemTappedEventArgs args)
+        {
+            Navigation.PushAsync(new ContentPage() { Content = new ProfileDetailView() });
         }
     }
 }

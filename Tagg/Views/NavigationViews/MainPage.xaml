@@ -4,9 +4,9 @@
             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             mc:Ignorable="d"
-            xmlns:views="clr-namespace:Tagg.Views"
             xmlns:mapViews="clr-namespace:Tagg.Views.MapViews;assembly=Tagg"
-            x:Class="Tagg.Views.MainPage">
+            xmlns:views="clr-namespace:Tagg.Views.NavigationViews"
+            x:Class="Tagg.Views.NavigationViews.MainPage">
 
     <MasterDetailPage.Master>
         <views:MenuPage />
@@ -20,7 +20,7 @@
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <views:TestView/>
+                <mapViews:MapPage/>
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>
