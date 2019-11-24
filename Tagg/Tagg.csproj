@@ -39,4 +39,7 @@
     <Compile Remove="Models\HomeMenuItem.cs" />
     <Compile Remove="Models\HomeMenuItem.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TaggUI\TaggUI\TaggUI.csproj" />
+  </ItemGroup>
 </Project>

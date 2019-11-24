@@ -1,0 +1,3 @@
+[submodule "TaggUI"]
+	path = TaggUI
+	url = https://github.com/gquerbes/TaggUI.git

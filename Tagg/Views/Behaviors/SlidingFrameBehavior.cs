@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -27,21 +28,18 @@ namespace Tagg.Views.Behaviors
         private void SwipeGestureOnSwiped(object sender, SwipedEventArgs e)
         {
             var view = (View) sender;
-
-            AnimateSlide(view, e.Direction);
+            _ = AnimateSlide(view, e.Direction);
 
         }
 
-        private bool isAnimating;
+        private bool _isAnimating;
         private const double CollapsedHeight = .25;
         private const double ExpandedHeight = 1;
 
-
-
         private async Task AnimateSlide(View view, SwipeDirection direction)
         {
-            if(isAnimating)return;
-            isAnimating = true;
+            if(_isAnimating)return;
+            _isAnimating = true;
             double height = AbsoluteLayout.GetLayoutBounds(view).Height;
             double changeDelta = 0;
 
@@ -62,12 +60,7 @@ namespace Tagg.Views.Behaviors
                 await Task.Delay(15);
             }
             
-
-            isAnimating = false;
+            _isAnimating = false;
         }
-      
-
-
-     
     }
 }

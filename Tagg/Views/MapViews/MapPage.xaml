@@ -6,6 +6,7 @@
              xmlns:mapViews="clr-namespace:Tagg.Views.MapViews;assembly=Tagg"
              xmlns:behaviors="clr-namespace:Tagg.Views.Behaviors"
              xmlns:profileViews="clr-namespace:Tagg.Views.ProfileViews;assembly=Tagg"
+             xmlns:containers="clr-namespace:TaggUI.Containers;assembly=TaggUI"
              mc:Ignorable="d"
              x:Class="Tagg.Views.MapViews.MapPage">
     <ContentPage.Content>
@@ -16,7 +17,7 @@
                     <behaviors:SlidingFrameBehavior/>
                 </Frame.Behaviors>
 
-                <profileViews:ProfileDetailView/>
+                 <profileViews:ProfileDetailView/> 
             </Frame>
         </AbsoluteLayout>
   
