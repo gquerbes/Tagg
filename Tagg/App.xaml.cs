@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Tagg.Views;
+using TaggUI.Styles;
 
 namespace Tagg
 {
@@ -13,6 +14,7 @@ namespace Tagg
             InitializeComponent();
 
             MainPage = new MainPage();
+
         }
 
         protected override void OnStart()

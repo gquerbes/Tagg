@@ -4,7 +4,6 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:mapViews="clr-namespace:Tagg.Views.MapViews;assembly=Tagg"
-             xmlns:behaviors="clr-namespace:Tagg.Views.Behaviors"
              xmlns:profileViews="clr-namespace:Tagg.Views.ProfileViews;assembly=Tagg"
              xmlns:containers="clr-namespace:TaggUI.Containers;assembly=TaggUI"
              mc:Ignorable="d"
@@ -12,14 +11,10 @@
     <ContentPage.Content>
         <AbsoluteLayout >
             <mapViews:MapView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" />
-            <Frame BackgroundColor="White"  AbsoluteLayout.LayoutBounds="0,1,1,.25" AbsoluteLayout.LayoutFlags="All" >
-                <Frame.Behaviors>
-                    <behaviors:SlidingFrameBehavior/>
-                </Frame.Behaviors>
-
-                 <profileViews:ProfileDetailView/> 
-            </Frame>
+            <containers:SlidingFrame>
+                <profileViews:ProfileDetailView/>
+            </containers:SlidingFrame>
         </AbsoluteLayout>
-  
+
     </ContentPage.Content>
 </ContentPage>

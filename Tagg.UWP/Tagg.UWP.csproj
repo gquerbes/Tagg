@@ -158,6 +158,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\TaggUI\TaggUI\TaggUI.csproj">
+      <Project>{205701DE-F406-41EC-B9EB-CA20AE2AA677}</Project>
+      <Name>TaggUI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tagg\Tagg.csproj">
       <Project>{E45CF468-90A1-4ECE-BB76-F914EE6326BB}</Project>
       <Name>Tagg</Name>

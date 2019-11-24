@@ -2,20 +2,20 @@
 <DataTemplate xmlns="http://xamarin.com/schemas/2014/forms"
           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
           x:Class="Tagg.Views.ProfileViews.ProfileViewCell">
-    <ViewCell Height="75">
+    <ViewCell>
             <ViewCell.View>
             <Grid RowSpacing="0" ColumnSpacing="10">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="20"/>
-                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="50"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <BoxView HeightRequest="40" WidthRequest="40" Color="Blue"  Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"/>
-                <Label Text="Cool Person" FontSize="Large" FontAttributes="Bold" Grid.Row="0" Grid.Column="1"/>
-                <Label Text="15 miles away" FontSize="Caption" FontAttributes="Italic" Grid.Row="1" Grid.Column="1"/>
+                <BoxView HeightRequest="10" WidthRequest="10" Color="Blue" Margin="2" Grid.Column="0" Grid.Row="0" />
+                <Label Text="Cool Person" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="15 miles away" FontSize="Caption" VerticalTextAlignment="Start" FontAttributes="Italic" Grid.Row="1" Grid.Column="1"/>
             </Grid>
     </ViewCell.View>
     </ViewCell>

@@ -4,12 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Tagg.Views.TestView">
+             x:Class="Tagg.Views.TestView"
+             BackgroundColor="{DynamicResource BackgroundColor}">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to the Tagg test app"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" 
+                TextColor="{DynamicResource TextPrimaryColor}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
