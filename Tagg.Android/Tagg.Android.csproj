@@ -93,6 +93,10 @@
       <Project>{8F1AB45B-A845-4A92-A996-15F71B85F50C}</Project>
       <Name>Tagg</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TaggUI\TaggUI.Android\TaggUI.Android.csproj">
+      <Project>{E41E4BA0-873E-4B22-BA30-7C90ABBEC63E}</Project>
+      <Name>TaggUI.Android</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
