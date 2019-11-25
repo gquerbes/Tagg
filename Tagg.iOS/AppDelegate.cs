@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using UserNotifications;
 
 namespace Tagg.iOS
 {
@@ -25,7 +26,46 @@ namespace Tagg.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
             Xamarin.FormsMaps.Init();
+
+            //prepare for notifications
+            UIApplication.SharedApplication.RegisterForRemoteNotifications();
+
+            //start messaging center
+            new Messaging.MessagingCenter().Init();
+            
+
             return base.FinishedLaunching(app, options);
         }
+
+
+
+        // iOS 10, fire when recieve notification foreground
+        [Export("userNotificationCenter:willPresentNotification:withCompletionHandler:")]
+        public void WillPresentNotification(UNUserNotificationCenter center, UNNotification notification, Action<UNNotificationPresentationOptions> completionHandler)
+        {
+            var title = notification.Request.Content.Title;
+            var body = notification.Request.Content.Body;
+           
+        }
+
+        [Export("application:didReceiveRemoteNotification:fetchCompletionHandler:")]
+        public void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
+        {
+            //
+        }
+
+        public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
+        {
+#if DEBUG
+            Firebase.CloudMessaging.Messaging.SharedInstance.SetApnsToken(deviceToken, Firebase.CloudMessaging.ApnsTokenType.Sandbox);
+#endif
+#if RELEASE
+			Firebase.CloudMessaging.Messaging.SharedInstance.SetApnsToken(deviceToken, Firebase.CloudMessaging.ApnsTokenType.Production);
+#endif
+        }
+
+
+     
+
     }
 }

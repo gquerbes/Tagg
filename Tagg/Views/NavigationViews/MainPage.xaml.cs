@@ -5,13 +5,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Tagg.Views.MapViews;
+using Tagg.Views.MessagingViews;
 
 namespace Tagg.Views.NavigationViews
 {
     public enum MenuItemType
     {
         Map,
-        Listview
+        Listview,
+        Messaging
     }
     public class HomeMenuItem
     {
@@ -45,6 +47,9 @@ namespace Tagg.Views.NavigationViews
                         break;
                     case (int)MenuItemType.Listview:
                         MenuPages.Add(id, new NavigationPage(new ContentPage() { Content = new ProfileViews.ProfileListView() }));
+                        break;
+                    case (int)MenuItemType.Messaging:
+                        MenuPages.Add(id, new NavigationPage(new MessagingPage()));
                         break;
                 }
             }

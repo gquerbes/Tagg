@@ -20,7 +20,7 @@ namespace Tagg.Views.NavigationViews
             {
                 new HomeMenuItem {Id = MenuItemType.Map, Title="Map" },
                 new HomeMenuItem {Id = MenuItemType.Listview, Title="List View" },
-
+                new HomeMenuItem {Id = MenuItemType.Messaging, Title="Messaging" },
             };
 
             ListViewMenu.ItemsSource = menuItems;
