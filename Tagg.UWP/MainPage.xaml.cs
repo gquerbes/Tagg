@@ -25,9 +25,9 @@ namespace Tagg.UWP
         public MainPage()
         {
             this.InitializeComponent();
+            Xamarin.FormsMaps.Init(Credentials.Credentials.UWP_MAP_KEY);
 
             LoadApplication(new Tagg.App());
-
             var uiSettings = new UISettings();
             SetTheme(uiSettings);
             uiSettings.ColorValuesChanged += UiSettingsOnColorValuesChanged;

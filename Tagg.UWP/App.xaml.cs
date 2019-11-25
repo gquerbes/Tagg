@@ -75,7 +75,6 @@ namespace Tagg.UWP
             // Ensure the current window is active
             Window.Current.Activate();
 
-            Xamarin.FormsMaps.Init(Credentials.Credentials.UWP_MAP_KEY);
         }
 
         /// <summary>
