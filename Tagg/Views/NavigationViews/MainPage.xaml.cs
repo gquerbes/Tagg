@@ -30,9 +30,9 @@ namespace Tagg.Views.NavigationViews
         {
             InitializeComponent();
 
-            MasterBehavior = MasterBehavior.SplitOnLandscape;
+            MasterBehavior = MasterBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Map, (NavigationPage)Detail);
+            //MenuPages.Add((int)MenuItemType., (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)

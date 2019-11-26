@@ -4,7 +4,7 @@
           x:Class="Tagg.Views.ProfileViews.ProfileViewCell">
     <ViewCell>
             <ViewCell.View>
-            <Grid RowSpacing="0" ColumnSpacing="10">
+            <Grid RowSpacing="0" ColumnSpacing="10" BackgroundColor="{DynamicResource BackgroundColor}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>

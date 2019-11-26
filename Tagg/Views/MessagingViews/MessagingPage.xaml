@@ -1,12 +1,42 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:messagingViews="clr-namespace:Tagg.Views.MessagingViews;assembly=Tagg"
              x:Class="Tagg.Views.MessagingViews.MessagingPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="TextLabel" />
+        <StackLayout >
+            <StackLayout VerticalOptions="FillAndExpand" >
+                <ScrollView Margin="25"  VerticalOptions="FillAndExpand">
+                    <StackLayout >
+                        <RelativeLayout BackgroundColor="Blue" VerticalOptions="Start">
+                            <messagingViews:MessageBubble BackgroundColor="Orange" 
+                                                          RelativeLayout.WidthConstraint="{ConstraintExpression
+                                                Type=RelativeToParent,Property=Width,Factor=.75,Constant=0}"/>
+                                                          
+
+                        </RelativeLayout>
+                        <RelativeLayout BackgroundColor="Yellow" VerticalOptions="Start"  >
+                            <messagingViews:MessageBubble BackgroundColor="DodgerBlue" 
+                                                          RelativeLayout.WidthConstraint="{ConstraintExpression
+                                                Type=RelativeToParent,Property=Width,Factor=.75,Constant=0}"
+                                                          RelativeLayout.XConstraint="{ConstraintExpression
+                                            Type=Constant, Constant=0}" />
+
+
+                        </RelativeLayout>
+                        <RelativeLayout BackgroundColor="Green" VerticalOptions="Start">
+                            <messagingViews:MessageBubble BackgroundColor="Orange" 
+                                                          RelativeLayout.WidthConstraint="{ConstraintExpression
+                                                Type=RelativeToParent,Property=Width,Factor=.75,Constant=0}"/>
+
+
+                        </RelativeLayout>
+                
+                    </StackLayout>
+
+                </ScrollView>
+            </StackLayout>
             <Editor x:Name="Editor"/>
-            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -6,6 +6,7 @@
             mc:Ignorable="d"
             xmlns:mapViews="clr-namespace:Tagg.Views.MapViews;assembly=Tagg"
             xmlns:views="clr-namespace:Tagg.Views.NavigationViews"
+            xmlns:messagingViews="clr-namespace:Tagg.Views.MessagingViews;assembly=Tagg"
             x:Class="Tagg.Views.NavigationViews.MainPage">
 
     <MasterDetailPage.Master>
@@ -20,7 +21,7 @@
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <mapViews:MapPage/>
+                <messagingViews:MessagingPage/>
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>
