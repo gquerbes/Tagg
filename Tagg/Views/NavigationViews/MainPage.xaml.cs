@@ -49,7 +49,7 @@ namespace Tagg.Views.NavigationViews
                         MenuPages.Add(id, new NavigationPage(new ContentPage() { Content = new ProfileViews.ProfileListView() }));
                         break;
                     case (int)MenuItemType.Messaging:
-                        MenuPages.Add(id, new NavigationPage(new MessagingPage()));
+                        MenuPages.Add(id, new NavigationPage(new CometMessagingPage()));
                         break;
                 }
             }
